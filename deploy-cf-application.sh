@@ -3,7 +3,7 @@
 export ORG=my
 export SPACE=space
 
-cf config --locale de_DE
+cf config --locale en_US
 cf api --skip-ssl-validation api.bosh-lite.com
 cf auth admin admin
 

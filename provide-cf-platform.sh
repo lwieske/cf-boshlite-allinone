@@ -28,7 +28,7 @@ pushd bin
 popd
 
 pushd stemcells
-      wget --content-disposition https://bosh.io/d/stemcells/bosh-warden-boshlite-ubuntu-trusty-go_agent?v=3147
+      wget -nc --content-disposition https://bosh.io/d/stemcells/bosh-warden-boshlite-ubuntu-trusty-go_agent?v=3147
 popd
 
 pushd bosh-lite
@@ -42,8 +42,6 @@ bosh target ${TARGET}
 bosh login ${USERNAME} ${PASSWORD}
 bosh upload stemcell ${STEMCELL_FILE} --skip-if-exists
 bosh stemcells
-
-echo ${PATH}
 
 pushd cf-release
       scripts/update
