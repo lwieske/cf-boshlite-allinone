@@ -3,7 +3,8 @@
 export ORG=my
 export SPACE=space
 
-cf api --skip-ssl-validation https://api.10.244.0.34.xip.io
+cf config --locale de_DE
+cf api --skip-ssl-validation api.bosh-lite.com
 cf auth admin admin
 
 cf create-org $ORG
